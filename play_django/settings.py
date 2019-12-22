@@ -126,8 +126,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-'''REST_FRAMEWORK = {
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':(
-        'play_django.apps.authentication.backends.JWTAuthentication'
-    )
-}'''
+        'play_django.apps.authentication.backends.JWTAuthentication',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20,
+}
