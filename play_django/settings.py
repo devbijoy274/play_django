@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+
     'play_django.apps.articles',
     'play_django.apps.authentication',
     'play_django.apps.profiles',
-    'play_django.apps.core' 
+    'play_django.apps.core' ,
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+'''REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':(
+        'play_django.apps.authentication.backends.JWTAuthentication'
+    )
+}'''
