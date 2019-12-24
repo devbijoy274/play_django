@@ -4,7 +4,7 @@ from .views import (
 )
 
 urlpatterns = [
-    #url(r'^users/login/?$', LoginApiView.as_view()),
+    url(r'^users/login/?$', LoginApiView.as_view()),
     url(r'^users/?$', RegistrationApiView.as_view()),
 ]
 
